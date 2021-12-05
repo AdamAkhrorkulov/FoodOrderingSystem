@@ -8,6 +8,9 @@ public class Order extends JFrame implements ActionListener {
 	JCheckBox cb1, cb2, cb3;
 	JButton b;
 
+	String pizzaType[] = {"","American","Italian"};
+	JComboBox pizzaSelection;
+	
 	Order() {
 		l = new JLabel("Food Ordering System");
 		l.setBounds(50, 50, 300, 20);
@@ -19,24 +22,30 @@ public class Order extends JFrame implements ActionListener {
 		cb3.setBounds(100, 200, 150, 20);
 		b = new JButton("Order");
 		b.setBounds(100, 250, 80, 30);
+		pizzaSelection = new JComboBox(pizzaType);
+		pizzaSelection.setBounds(100, 350, 80, 30);
+		
 		b.addActionListener(this);
 		add(l);
 		add(cb1);
 		add(cb2);
 		add(cb3);
 		add(b);
-		setSize(400, 400);
+		add(pizzaSelection);
+	
+		setSize(600, 600);
 		setLayout(null);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-
 	}
 
 	// 1. Registration/login screen:   login/password, register new user, login, 
 	// 2. need to register by name, phone number, address
 	// 3. Order screen: add more food, drinks, 
 	// 4. Payment screen
-	
+
+
+
 	public void actionPerformed(ActionEvent e) {
 		float amount = 0;
 		String msg = "";

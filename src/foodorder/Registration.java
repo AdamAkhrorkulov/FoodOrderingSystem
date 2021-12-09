@@ -13,15 +13,12 @@ class Registration extends JFrame implements ActionListener
 
 	JLabel l = new JLabel("First Name");
 	JLabel l1 = new JLabel("Last Name");
+	JLabel l5 = new JLabel("Email");
+	JLabel l6 = new JLabel("Contact No");
+	JLabel l9 = new JLabel("Address");
 	JLabel l2 = new JLabel("User Name");
 	JLabel l3 = new JLabel("Password");
 	JLabel l4 = new JLabel("Confirm Password");
-	JLabel l5 = new JLabel("Email");
-	JLabel l6 = new JLabel("Contact No");
-	JLabel l7 = new JLabel("Gender");
-	String genderList[] = {"","M","F"};
-	JComboBox l8 = new JComboBox(genderList);
-	JLabel l9 = new JLabel("Address");
 
 	JTextField t = new JTextField();
 	JTextField t1 = new JTextField();
@@ -64,9 +61,6 @@ class Registration extends JFrame implements ActionListener
 		l6.setBounds(55,360,100,25);
 		add(l6);
 
-		l7.setBounds(55,400,100,25);
-		add(l7);
-
 		t.setBounds(250,80,200,23);
 		add(t);
 
@@ -92,9 +86,6 @@ class Registration extends JFrame implements ActionListener
 		add(t6);
 
 
-		l8.setBounds(250,400,200,25);
-		add(l8);
-
 		cancel.setBounds(200,480,100,30);
 //		b.setIcon(new ImageIcon("cancel.png"));
 		add(cancel);
@@ -111,7 +102,7 @@ class Registration extends JFrame implements ActionListener
 
 	}
 
-	String first,last,user,pass,mail,address,contact,gender;
+	String first,last,user,pass,mail,address,contact;
 	String confirmPass;
 
 	public void actionPerformed(ActionEvent a)
@@ -131,9 +122,8 @@ class Registration extends JFrame implements ActionListener
 			address = t7.getText();
 			mail = t5.getText();
 			contact = t6.getText();
-			gender = String.valueOf(l8.getSelectedItem());
 
-			if(first.equals("") || last.equals("") || user.equals("") || pass.equals("") || confirmPass.equals("") || address.equals("") || mail.equals("") || contact.equals("") || gender.equals(""))
+			if(first.equals("") || last.equals("") || user.equals("") || pass.equals("") || confirmPass.equals("") || address.equals("") || mail.equals("") || contact.equals(""))
 			{
 				TextFieldEmpty t = new TextFieldEmpty();
 			}
@@ -141,8 +131,6 @@ class Registration extends JFrame implements ActionListener
 			{
 				if(pass.equals(confirmPass))
 				{
-//					String Q = "INSERT INTO `member` (`First Name`, `Last Name`, `User Name`, `Password`, `Address`, `Email`, `Contact No.`, `Gender`) VALUES ('"+first+"', '"+last+"', '"+user+"', '"+pass+"', '"+address+"', '"+mail+"', '"+contact+"', '"+gender+"');";
-//					MemberDatabase n = new MemberDatabase(Q);
 //					RegistrationConfirmedScreen m = new RegistrationConfirmedScreen();
 					Order o = new Order();
 					this.setVisible(false);

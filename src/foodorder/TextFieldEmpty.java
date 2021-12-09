@@ -2,9 +2,7 @@ package foodorder;
 import javax.swing.*;
 import java.awt.event.*;
 
-/**
-     @author Tisha
-*/
+
 
 public class TextFieldEmpty extends JFrame implements ActionListener
 {

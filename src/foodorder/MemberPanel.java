@@ -3,10 +3,6 @@ package foodorder;
 import javax.swing.*;
 import java.awt.event.*;
 
-/**
-     @author Tisha
-*/
-
 class MemberPanel extends JFrame implements ActionListener
 {
 	JButton cngUserName,cngPass,cngAddress,cngMail,cngContact;

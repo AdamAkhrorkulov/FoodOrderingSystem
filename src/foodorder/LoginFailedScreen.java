@@ -2,9 +2,6 @@ package foodorder;
 import javax.swing.*;
 import java.awt.event.*;
 
-/**
-     @author Tisha
-*/
 
 public class LoginFailedScreen extends JFrame implements ActionListener
 {

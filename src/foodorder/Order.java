@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Order extends JFrame implements ActionListener {
-    JLabel l, pizzaLabel, burgerLabel, tacosLabel;
+    JLabel l, pizzaLabel, burgerLabel, tacosLabel, grandTotalName, grandTotal;
     JLabel pizzaPrice, burgerPrice, tacosPrice;
     JLabel pizzaTotal, burgerTotal, tacosTotal;
     JComboBox burgerSelection, tacosSelection, pizzaSelection;
@@ -61,6 +61,11 @@ public class Order extends JFrame implements ActionListener {
         pizzaTotal = new JLabel("0");
         pizzaTotal.setBounds(450, 300, 50, 30);
 
+        grandTotal = new JLabel("0");
+        grandTotal.setBounds(450, 360, 50, 30);
+
+        grandTotalName = new JLabel("GrandTotal");
+        grandTotalName.setBounds(50, 360, 80, 30);
 
         orderBtn = new JButton("Order");
         orderBtn.setBounds(260, 480, 80, 30);
@@ -75,6 +80,8 @@ public class Order extends JFrame implements ActionListener {
         pizzaSelection.setBounds(100, 300, 150, 30);
 
         add(l);
+        add(grandTotalName);
+        add(grandTotal);
         add(burgerLabel);
         add(tacosLabel);
         add(pizzaLabel);
@@ -115,7 +122,6 @@ public class Order extends JFrame implements ActionListener {
     // 2. need to register by name, phone number, address
     // 3. Order screen: add more food, dropdown list pizza, price label drinks, button: cancel, submit order
     // 4. Payment screen, card number button pay.
-
 
     public void actionPerformed(ActionEvent e) {
 
@@ -176,12 +182,14 @@ public class Order extends JFrame implements ActionListener {
                 Integer pTotal = pPrice * pQuantity;
 
                 pizzaTotal.setText(pTotal.toString());
+
+                Integer total = bTotal + tTotal + pTotal;
+                grandTotal.setText(total.toString());
             }
         }
     }
 
     public static void main(String[] args) {
-//		new CheckBoxExample();
 //		new Registration();
         new Order();
     }

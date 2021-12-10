@@ -10,8 +10,7 @@ public class PasswordNotMatchScreen extends JFrame implements ActionListener
 	
 	JButton b = new JButton("Back");
 	
-	public PasswordNotMatchScreen()
-	{
+	public PasswordNotMatchScreen() {
 		setSize(400,200);
 		setVisible(true);
 		setLayout(null);

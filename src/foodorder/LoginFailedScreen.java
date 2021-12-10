@@ -3,14 +3,13 @@ import javax.swing.*;
 import java.awt.event.*;
 
 
-public class LoginFailedScreen extends JFrame implements ActionListener
-{
+public class LoginFailedScreen extends JFrame implements ActionListener {
 	JLabel l = new JLabel("Invalid Credential");
 	JLabel l1 = new JLabel("Login Failed !!");
 	JButton b = new JButton("Back");
 	
-	public LoginFailedScreen()
-	{
+	public LoginFailedScreen() {
+
 		setSize(400,400);
 		setVisible(true);
 		setLayout(null);

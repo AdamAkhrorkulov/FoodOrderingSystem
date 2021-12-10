@@ -1,12 +1,11 @@
 package foodorder;
 
-//import checking.*;
+
 import javax.swing.*;
 import java.awt.event.*;
 
-@SuppressWarnings("unchecked")
-class Registration extends JFrame implements ActionListener
-{
+
+class Registration extends JFrame implements ActionListener {
 
 	JButton cancel = new JButton("Cancel");
 	JButton b1 = new JButton("Submit");
@@ -35,7 +34,7 @@ class Registration extends JFrame implements ActionListener
 		setSize(600,600);
 		setVisible(true);
 		setLayout(null);
-//		setContentPane(new JLabel(new ImageIcon("reg.jpg")));
+
 
 		l.setBounds(55,80,100,25);
 		add(l);
@@ -87,11 +86,11 @@ class Registration extends JFrame implements ActionListener
 
 
 		cancel.setBounds(200,480,100,30);
-//		b.setIcon(new ImageIcon("cancel.png"));
+
 		add(cancel);
 
 		b1.setBounds(350,480,100,30);
-//		b1.setIcon(new ImageIcon("submit.png"));
+
 		add(b1);
 
 		cancel.addActionListener(this);
@@ -131,7 +130,7 @@ class Registration extends JFrame implements ActionListener
 			{
 				if(pass.equals(confirmPass))
 				{
-//					RegistrationConfirmedScreen m = new RegistrationConfirmedScreen();
+
 					Order o = new Order();
 					this.setVisible(false);
 				}

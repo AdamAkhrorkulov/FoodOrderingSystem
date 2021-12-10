@@ -1,5 +1,5 @@
 package foodorder;
-//import checking.*;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -115,8 +115,7 @@ class MemberPanel extends JFrame implements ActionListener
 			
 			if(input.length() > 0)
 			{
-//				x = 0 / 45 =//run time error 
-//				MemberDatabase n = new MemberDatabase("UPDATE `member` SET `User Name` = '"+input+"' WHERE `member`.`User Name` = '"+k.userName+"'");
+
 			}
 			else
 			{
@@ -129,7 +128,7 @@ class MemberPanel extends JFrame implements ActionListener
 			
 			if(input.length() > 0)
 			{
-//				MemberDatabase n = new MemberDatabase("UPDATE `member` SET `Password` = '"+input+"' WHERE `member`.`User Name` = '"+k.userName+"'");
+
 			}
 			else
 			{
@@ -142,7 +141,7 @@ class MemberPanel extends JFrame implements ActionListener
 			
 			if(input.length() > 0)
 			{
-//				MemberDatabase n = new MemberDatabase("UPDATE `member` SET `Address` = '"+input+"' WHERE `member`.`User Name` = '"+k.userName+"'");	
+
 			}
 			else
 			{
@@ -155,7 +154,7 @@ class MemberPanel extends JFrame implements ActionListener
 			
 			if(input.length() > 0)
 			{
-//				MemberDatabase n = new MemberDatabase("UPDATE `member` SET `Email` = '"+input+"' WHERE `member`.`User Name` = '"+k.userName+"'");
+
 			}
 			else
 			{
@@ -168,7 +167,7 @@ class MemberPanel extends JFrame implements ActionListener
 			
 			if(input.length() > 0)
 			{
-//				MemberDatabase n = new MemberDatabase("UPDATE `member` SET `Contact No.` = '"+input+"' WHERE `member`.`User Name` = '"+k.userName+"'");
+
 			}
 			else
 			{

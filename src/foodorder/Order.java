@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Order extends JFrame implements ActionListener {
-    JLabel l, pizzaLabel, burgerLabel, tacosLabel, grandTotalName, grandTotal;
+    JLabel l,menu, pizzaLabel, burgerLabel, tacosLabel, grandTotalName, grandTotal;
     JLabel pizzaPrice, burgerPrice, tacosPrice;
     JLabel pizzaTotal, burgerTotal, tacosTotal;
     JComboBox burgerSelection, tacosSelection, pizzaSelection;
@@ -13,11 +13,13 @@ public class Order extends JFrame implements ActionListener {
     JButton orderBtn;
 
     String burgerTypes[] = {"", "Spicy Burger", "All American Burger", "Cheesy Burger", "BBQ Burger"};
-    String tacoTypes[] = {"", "Mexican", "Colombian", "Chillean", "Brazilian"};
+    String tacoTypes[] = {"", "Mexican", "Colombian", "Chilean", "Brazilian"};
     String pizzaTypes[] = {"", "American", "Italian", "Pepperoni", "Alfredo", "Spicy Ranch", "BBQ Buzz"};
     String quantityUnits[] = {"0","1","2","3","4","5","6","7","8","9","10",};
 
     Order() {
+        menu = new JLabel("Menu");
+        menu.setBounds(260,20,80,20);
         l = new JLabel("Please make order");
         l.setBounds(50, 50, 300, 20);
 
@@ -79,6 +81,7 @@ public class Order extends JFrame implements ActionListener {
         pizzaSelection = new JComboBox(pizzaTypes);
         pizzaSelection.setBounds(100, 300, 150, 30);
 
+        add(menu);
         add(l);
         add(grandTotalName);
         add(grandTotal);
@@ -137,29 +140,47 @@ public class Order extends JFrame implements ActionListener {
 // "American", "Italian", "Pepperoni", "Alfredo", "Spicy Ranch", "BBQ Buzz"};
             if (item == "American") {
                 pizzaPrice.setText("15");
-//                int result = 15 * (Integer) pizzaQuantity.getSelectedItem();
             }
             else if (item == "Italian") {
-                pizzaPrice.setText("12");
+                pizzaPrice.setText("17");
             }
             else if (item == "Pepperoni") {
-                pizzaPrice.setText("13");
+                pizzaPrice.setText("19");
+            }
+            else if (item == "Alfredo") {
+                pizzaPrice.setText("17");
+            }
+            else if (item == "Spicy Ranch") {
+                pizzaPrice.setText("22");
+            }
+            else if (item == "BBQ Buzz") {
+                pizzaPrice.setText("25");
             }
 //"Spicy Burger", "All American Burger", "Cheesy Burger", "BBQ Burger"};
             else if (item == "Spicy Burger") {
-                burgerPrice.setText("15");
+                burgerPrice.setText("17");
             }
             else if (item == "All American Burger") {
                 burgerPrice.setText("15");
             }
             else if (item == "Cheesy Burger") {
-                burgerPrice.setText("15");
+                burgerPrice.setText("18");
             }
             else if (item == "BBQ Burger") {
-                burgerPrice.setText("45");
+                burgerPrice.setText("25");
             }
+// "Mexican", "Colombian", "Chilean", "Brazilian"};
             else if (item == "Mexican") {
-                tacosPrice.setText("15");
+                tacosPrice.setText("3");
+            }
+            else if (item == "Colombian") {
+                tacosPrice.setText("4");
+            }
+            else if (item == "Chilean") {
+                tacosPrice.setText("3");
+            }
+            else if (item == "Brazilian") {
+                tacosPrice.setText("5");
             }
 
             else if (item == "1" || item == "2" || item == "3" || item == "4" || item == "5"
@@ -190,7 +211,7 @@ public class Order extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-//		new Registration();
-        new Order();
+		new Registration();
+//        new Order();
     }
 }

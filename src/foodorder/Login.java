@@ -1,12 +1,10 @@
 package foodorder;
-//import checking.*;
-//import java.sql.*;
+
 import javax.swing.*;
 import java.awt.event.*;
 
 
-public class Login extends JFrame implements ActionListener 
-{
+public class Login extends JFrame implements ActionListener {
 	JButton b = new JButton("Login");
 	JButton b1 = new JButton("Register");
 	JLabel l = new JLabel("Username");
@@ -14,23 +12,21 @@ public class Login extends JFrame implements ActionListener
 	JTextField f = new JTextField();
 	JTextField f1 = new JTextField();
 	int flag = 0;
-//	MemberDatabase m;
+
 	
-	public Login()
-	{	
-//        m = new MemberDatabase();
-		
+	public Login() {
+
 		setSize(600,600);
 		setVisible(true);
 		setLayout(null);
 		setContentPane(new JLabel());
 		
 		b.setBounds(400,350,100,40);
-		b.setIcon(new ImageIcon("login.png"));
+//		b.setIcon(new ImageIcon("login.png"));
 		add(b);
 		
 		b1.setBounds(200,350,170,40);
-//	    b1.setIcon(new ImageIcon("register.png"));
+
 		add(b1);
 		
 		l.setBounds(100,150,100,20);
@@ -61,24 +57,7 @@ public class Login extends JFrame implements ActionListener
 			
 			if(!userName.equals("") && !password.equals(""))
 			{
-			
-//			int row = (m.memberList).getRowCount();
-//			
-//			for(int i=0;i<row;i++)
-//			{
-//				if((((m.memberList).getValueAt(i,2)).toString()).equals(userName) && (((m.memberList).getValueAt(i,3)).toString()).equals(password))
-//				{
-//					first = ((m.memberList).getValueAt(i,0)).toString();
-//					last = ((m.memberList).getValueAt(i,1)).toString();
-//					address = ((m.memberList).getValueAt(i,4)).toString();
-//					mail = ((m.memberList).getValueAt(i,5)).toString();
-//					contact = ((m.memberList).getValueAt(i,6)).toString();
-//					gender = ((m.memberList).getValueAt(i,7)).toString();
-//					flag = 1;
-//					break;
-//				}
-//			}
-//			
+
 			if(flag == 0)
 			{
 				LoginFailedScreen n = new LoginFailedScreen();

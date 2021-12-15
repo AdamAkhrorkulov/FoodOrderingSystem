@@ -22,7 +22,6 @@ public class Login extends JFrame implements ActionListener {
 		setContentPane(new JLabel());
 		
 		b.setBounds(400,350,100,40);
-//		b.setIcon(new ImageIcon("login.png"));
 		add(b);
 		
 		b1.setBounds(200,350,170,40);

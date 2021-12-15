@@ -18,6 +18,9 @@ class Registration extends JFrame implements ActionListener {
 	JLabel l2 = new JLabel("User Name");
 	JLabel l3 = new JLabel("Password");
 	JLabel l4 = new JLabel("Confirm Password");
+	JLabel r = new JLabel("Registration");
+//	add(r);
+//	r.setBounds(260,20,80,20);
 
 	JTextField t = new JTextField();
 	JTextField t1 = new JTextField();
@@ -29,8 +32,7 @@ class Registration extends JFrame implements ActionListener {
 	JTextField t7 = new JTextField();
 	//setContentPane(new JLabel(new ImageIcon("reg.jpg")));
 
-	public Registration()
-	{
+	public Registration() {
 		setSize(600,600);
 		setVisible(true);
 		setLayout(null);

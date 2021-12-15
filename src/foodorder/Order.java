@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Order extends JFrame implements ActionListener {
-    JLabel l,menu, pizzaLabel, burgerLabel, tacosLabel, grandTotalName, grandTotal;
+    JLabel l,QTY, menu, pizzaLabel, burgerLabel, tacosLabel, grandTotalName, grandTotal;
     JLabel pizzaPrice, burgerPrice, tacosPrice;
     JLabel pizzaTotal, burgerTotal, tacosTotal;
     JComboBox burgerSelection, tacosSelection, pizzaSelection;
@@ -20,6 +20,10 @@ public class Order extends JFrame implements ActionListener {
     Order() {
         menu = new JLabel("Menu");
         menu.setBounds(260,20,80,20);
+
+        QTY = new JLabel("QTY");
+        QTY.setBounds(350, 50, 50, 30);
+
         l = new JLabel("Please make order");
         l.setBounds(50, 50, 300, 20);
 
@@ -82,6 +86,7 @@ public class Order extends JFrame implements ActionListener {
         pizzaSelection.setBounds(100, 300, 150, 30);
 
         add(menu);
+        add(QTY);
         add(l);
         add(grandTotalName);
         add(grandTotal);
@@ -120,7 +125,7 @@ public class Order extends JFrame implements ActionListener {
         tacoQuantity.addActionListener(this);
         pizzaQuantity.addActionListener(this);
     }
-
+    // plan
     // 1. Registration/login screen:   login/password, register new user, login,
     // 2. need to register by name, phone number, address
     // 3. Order screen: add more food, dropdown list pizza, price label drinks, button: cancel, submit order
